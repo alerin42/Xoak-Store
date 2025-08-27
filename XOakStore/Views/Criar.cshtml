@@ -1,0 +1,19 @@
+﻿@model XoakStore.Models.Produto
+
+<h2>Cadastrar Produto</h2>
+@using (Html.BeginForm("Criar", "Produto", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        @Html.TextBoxFor(m => m.Nome, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="Preco">Preço</label>
+        @Html.TextBoxFor(m => m.Preco, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="Estoque">Estoque</label>
+        @Html.TextBoxFor(m => m.Estoque, new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+}

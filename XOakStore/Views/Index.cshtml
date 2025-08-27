@@ -1,0 +1,22 @@
+﻿@model List<XoakStore.Models.Produto>
+
+<h2>Lista de Produtos</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Estoque</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model)
+        {
+            <tr>
+                <td>@produto.Nome</td>
+                <td>@produto.Preco</td>
+                <td>@produto.Estoque</td>
+            </tr>
+        }
+    </tbody>
+</table>
